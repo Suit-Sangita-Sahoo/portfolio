@@ -1,0 +1,57 @@
+/* Base navbar styles */
+.navbar {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  background-color: aqua;
+  gap: 100px;
+  align-items: center;
+  z-index: 10;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin: 0px 20px;
+}
+
+.logo{
+    margin-left: 50px;
+}
+
+#list>ul{
+    display: flex;
+    gap: 80px;
+   list-style: none;
+   cursor: pointer;
+}
+#list>ul>li:hover{
+    color: blue;
+}
+#nav{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+#shop>button{
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: gray;
+    color: white;
+    margin-right: 50px;
+    cursor: pointer;
+}
+html {
+  scroll-behavior: smooth; /* enables smooth scrolling */
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#nav ul li a:hover {
+  color: blue; /* highlight on hover */
+}
