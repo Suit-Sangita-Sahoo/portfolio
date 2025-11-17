@@ -5,6 +5,7 @@ import Navbar from "./Navbar/Navbar"
 import Project from "./Projects/Project"
 import "./Portfolio.css"
 import Footer from "./Footer/Footer"
+import Skill from "./Skill/Skill"
 
 const Portfolio=()=>{
     return(
@@ -12,6 +13,7 @@ const Portfolio=()=>{
             <Navbar/>
             <Home/>
             <About/>
+            <Skill/>
             <Project/>
             <Contact/>
             <Footer/>
