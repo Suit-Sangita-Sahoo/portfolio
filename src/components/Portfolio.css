@@ -10,3 +10,151 @@
      margin: 0;
      box-sizing: border-box;
 }
+
+
+#portfolio {
+  width: 100%;
+  overflow-x: hidden;
+ 
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+#portfolio > * {
+  padding-top: 50px;
+}
+
+
+@media (max-width: 600px) {
+
+ 
+  #nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 10px;
+  }
+
+  #nav .logo h1 {
+    font-size: 22px;
+  }
+
+  #nav #list ul {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  #nav #shop button {
+    margin-top: 15px;
+    width: 140px;
+    font-size: 14px;
+  }
+
+  /* Home section */
+  #home {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    height: auto;
+  }
+
+  #home #main {
+    padding: 0 15px;
+  }
+
+  #home #main #name h3 {
+    font-size: 16px;
+  }
+
+  .text-rotate {
+    font-size: 28px !important;
+  }
+
+  #exe {
+    font-size: 15px;
+  }
+
+  #logo ul {
+    justify-content: center;
+    gap: 25px !important;
+  }
+
+  /* Profile image */
+  #img,
+  .logo-container img {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  /* About Section */
+  #about {
+    padding: 20px;
+  }
+
+  /* Skills */
+  #skill {
+    padding: 20px;
+  }
+
+  /* Projects */
+  #project {
+    padding: 20px;
+  }
+
+  /* Contact */
+  #contact {
+    padding: 20px;
+  }
+
+  /* Footer */
+  #footer {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+  #nav {
+    padding: 10px 25px;
+  }
+
+  #home {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #home #main {
+    padding: 10px 30px;
+  }
+
+  .text-rotate {
+    font-size: 35px;
+  }
+
+  #img {
+    width: 320px !important;
+    height: 320px !important;
+  }
+
+  #project,
+  #skill,
+  #about,
+  #contact {
+    padding: 40px;
+  }
+}
+
+
+/* ---------- LARGE SCREEN (900px+) ---------- */
+@media (min-width: 900px) {
+  #portfolio {
+    padding: 10px 50px;
+  }
+}
