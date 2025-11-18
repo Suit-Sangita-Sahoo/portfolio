@@ -1,29 +1,9 @@
-
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;   
-  margin: auto;
-  margin-top: 60px;
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
-.profile-pic {
-  width: 350px;
-  height: 350px;      
-  border-radius: 50%; 
-  object-fit: cover;  
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(-35px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
+.animate-floating {
+  animation: floating 4s ease-in-out infinite;
 }

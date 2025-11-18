@@ -9,7 +9,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="contact-container">
+    <div id="contact" className="contact-container">
       <h2 className="title">Get in touch</h2>
       <p className="subtitle">
         Do you have a project in your mind, contact me here
@@ -26,7 +26,7 @@ const Contact = () => {
           ))}
         </div>
 
-        {/* Right box - contact form */}
+       
         <form className="contact-form">
           <div className="form-row">
             <input type="text" placeholder="Name" required />

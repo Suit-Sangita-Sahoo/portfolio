@@ -1,47 +1,82 @@
-import About from "../About/About";
-import Contact from "../Contact/Contact";
-import Home from "../Home/Home";
-import Project from "../Projects/Project";
+import { useState } from "react";
 import { MdOutlineCloudDownload } from "react-icons/md";
-import "./Navbar.css";
 
-const Navbar = ({ type }) => {
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   const menuItems = [
-    {
-      name:"Home",
-      link:<Home/>
-    },
-    {
-      name:"About",
-      link:<About/>
-    },
-    {
-      name:"Projects",
-      link:<Project/>
-    },
-    {
-      name:"Contact",
-      link:<Contact/>
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Skill", id: "skill" },
+    { name: "Project", id: "project" },
+    { name: "Contact", id: "contact" },
+  ];
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setOpen(false); 
     }
-    ];
-  
+  };
+
   return (
-    <div id="nav">
-      <div className="logo">
-        <h1>Sangita</h1>
-      </div>
-      <div id="list">
-        <ul>
-          {menuItems.map((item) => (
-            <li>{item.name}{item.li}</li>
-            
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+       
+        <h1 className="text-2xl font-bold text-blue-600 tracking-wide cursor-pointer">
+          Sangita
+        </h1>
+
+       
+        <ul className="hidden md:flex gap-8 text-lg font-medium">
+          {menuItems.map((item, index) => (
+            <li
+              key={index}
+              className="cursor-pointer hover:text-blue-600 transition"
+              onClick={() => scrollToSection(item.id)}
+            >
+              {item.name}
+            </li>
           ))}
         </ul>
+
+        
+        <button className="hidden md:flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+          <MdOutlineCloudDownload size={22} />
+          Download CV
+        </button>
+
+        
+        <button
+          className="md:hidden text-3xl text-gray-700"
+          onClick={() => setOpen(!open)}
+        >
+          ☰
+        </button>
       </div>
-      <div id="shop">
-        <button><MdOutlineCloudDownload />Download CV</button>
-      </div>
-    </div>
+
+     
+      {open && (
+        <ul className="md:hidden bg-white shadow-lg px-5 pb-4 space-y-4 text-lg font-medium">
+          {menuItems.map((item, index) => (
+            <li
+              key={index}
+              className="cursor-pointer hover:text-blue-600 transition py-1"
+              onClick={() => scrollToSection(item.id)}
+            >
+              {item.name}
+            </li>
+          ))}
+
+          <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition w-full justify-center">
+            <MdOutlineCloudDownload size={22} />
+            Download CV
+          </button>
+        </ul>
+      )}
+    </nav>
   );
 };
 

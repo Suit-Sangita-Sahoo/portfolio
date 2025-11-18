@@ -4,7 +4,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 50px;
+  
+  padding: 50px 90px;
   display: flex;
   background-color: aqua;
   gap: 100px;
@@ -34,7 +35,7 @@
 }
 #shop>button{
     width: 150px;
-    height: 30px;
+    height: 40px;
     border-radius: 8px;
     background-color: gray;
     color: white;
@@ -42,7 +43,7 @@
     cursor: pointer;
 }
 html {
-  scroll-behavior: smooth; /* enables smooth scrolling */
+  scroll-behavior: smooth; 
 }
 
 #nav ul li a {
